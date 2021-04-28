@@ -1,6 +1,6 @@
 #include "utils.hh"
 
-enum verbosity_levels vl = VL_INFO;
+enum verbosity_levels vl = VL_DEBUG;
 
 std::string utils::log_label(enum verbosity_levels vl) {
 	if (vl == VL_ERROR) {

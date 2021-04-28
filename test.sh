@@ -24,7 +24,7 @@ make &>> test_log
 mkdir symbols
 
 echo "Running test program for instrumentation..."
-../pin/pin -t obj-intel64/freud-pin.so -- ../micro_benchmark/micro_benchmark --test_instrumentation &>> test_log
+$PINDIR/pin -t obj-intel64/freud-pin.so -- ../micro_benchmark/micro_benchmark --test_instrumentation &>> test_log
 mv symbols ../test/
 cd ../
 
@@ -36,7 +36,7 @@ echo "Running test program for the statistical analysis..."
 rm -rf symbols # clean the logs for the test of the instrumentation
 cd ../freud-pin/
 mkdir symbols
-../pin/pin -t obj-intel64/freud-pin.so -- ../micro_benchmark/micro_benchmark #&>> test_log
+$PINDIR/pin -t obj-intel64/freud-pin.so -- ../micro_benchmark/micro_benchmark &>> test_log
 mv symbols ../micro_benchmark_analysis/
 
 echo "Performing statistical analysis..."

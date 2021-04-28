@@ -737,7 +737,7 @@ void dwarf_explorer::walk_tree_dfs(const dwarf::die node,
 	if ((node.tag == dwarf::DW_TAG::class_type || node.tag == dwarf::DW_TAG::structure_type) && !node.has(dwarf::DW_AT::declaration) && node.has(dwarf::DW_AT::name)) { 
 		// not interested in declarations, yet...
 		std::string cname = to_string(node[dwarf::DW_AT::name]);
-		//std::cout << "### Found class " << cname << std::endl;
+		std::cout << "### Found class " << cname << std::endl;
 		if (hierarchy_tree_nodes_map.find(cname) == hierarchy_tree_nodes_map.end()) {
 			std::string linkage_name = get_class_linkage_name(cname, node);
 			hierarchy_tree_nodes_map.insert(std::make_pair(cname, new hierarchy_tree_node(cname, linkage_name)));
