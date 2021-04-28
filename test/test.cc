@@ -138,11 +138,11 @@ bool test_instrumentation_output() {
 	err |= check_Z18test_linear_farrayPA10_j(data);
 
 	// _Z14test_namespacePN8whatever25namespaced_abstract_classE	
-	std::cout << "Checking _Z14test_namespacePN8whatever25namespaced_abstract_classE" << std::endl;
-	data.clear();
-	m_ids_map.clear();
-	reader::read_folder("symbols/_Z14test_namespacePN8whatever25namespaced_abstract_classE/", data, m_ids_map);
-	err |= check_Z14test_namespacePN8whatever25namespaced_abstract_classE(data);
+	// std::cout << "Checking _Z14test_namespacePN8whatever25namespaced_abstract_classE" << std::endl;
+	// data.clear();
+	// m_ids_map.clear();
+	// reader::read_folder("symbols/_Z14test_namespacePN8whatever25namespaced_abstract_classE/", data, m_ids_map);
+	// err |= check_Z14test_namespacePN8whatever25namespaced_abstract_classE(data);
 
 	return err;
 }
